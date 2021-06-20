@@ -1,0 +1,10 @@
+{
+    "name": "Team 5 TCSS 450 Project Web Service",
+    "version": "0.1.0",
+    "description": "Team 5's TCSS 450 Project Web Service API Documentation",
+    "title": "Project API Doc",
+    "url" : "https://team-5-tcss-450.herokuapp.com/",
+    "order": [
+      "Auth" 
+    ]
+  }

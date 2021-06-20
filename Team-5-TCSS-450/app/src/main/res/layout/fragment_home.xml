@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/homeLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:visibility="visible"
+    tools:context=".home.HomeFragment">
+
+    <!-- Welcome message-->
+    <ImageView
+        android:id="@+id/image_homeWelcomeMessage"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="12dp"
+        android:contentDescription="@string/text_welcomeMessageImage"
+        android:src="@drawable/ic_sunset_black_387dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/text_homeWelcomeMessage"
+        android:layout_width="320dp"
+        android:layout_height="26dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="16dp"
+        android:text="@string/text_homeWelcomeMessage"
+        android:textAlignment="viewStart"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/image_homeWelcomeMessage"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!--Weather-->
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/weatherLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:layout_editor_absoluteX="82dp"
+        tools:layout_editor_absoluteY="0dp">
+
+
+        <TextView
+            android:id="@+id/text_homeWeatherBackground"
+            android:layout_width="410dp"
+            android:layout_height="200dp"
+            android:layout_marginTop="56dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/text_homeWeatherToday"
+            android:layout_width="144dp"
+            android:layout_height="25dp"
+            android:layout_marginEnd="16dp"
+            android:ems="10"
+            android:text="@string/text_weatherToday"
+            android:textAlignment="center"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.739"
+            app:layout_constraintStart_toEndOf="@+id/image_homeWeatherStatus"
+            app:layout_constraintTop_toTopOf="@+id/text_homeWeatherBackground" />
+
+        <TextView
+            android:id="@+id/text_homeWeatherDate"
+            android:layout_width="144dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:text="@string/text_homeWeatherDate"
+            android:textAlignment="center"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.739"
+            app:layout_constraintStart_toEndOf="@+id/image_homeWeatherStatus"
+            app:layout_constraintTop_toBottomOf="@+id/text_homeWeatherToday" />
+
+        <TextView
+            android:id="@+id/text_homeWeatherCondition"
+            android:layout_width="144dp"
+            android:layout_height="50dp"
+            android:layout_marginEnd="16dp"
+            android:text="@string/text_homeWeatherStatus"
+            android:textAlignment="center"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.777"
+            app:layout_constraintStart_toEndOf="@+id/image_homeWeatherStatus"
+            app:layout_constraintTop_toBottomOf="@+id/text_homeWeatherDate" />
+
+        <TextView
+            android:id="@+id/text_homeWeatherTempCelsius"
+            android:layout_width="144dp"
+            android:layout_height="35dp"
+            android:layout_marginEnd="16dp"
+            android:text="@string/text_homeWeatherTempCelsius"
+            android:textAlignment="center"
+            android:textSize="30sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.739"
+            app:layout_constraintStart_toEndOf="@+id/image_homeWeatherStatus"
+            app:layout_constraintTop_toBottomOf="@+id/text_homeWeatherCondition" />
+
+        <TextView
+            android:id="@+id/text_homeWeatherTempFahrenheit"
+            android:layout_width="144dp"
+            android:layout_height="35dp"
+            android:layout_marginEnd="16dp"
+            android:text="@string/text_homeWeatherTempFahrenheit"
+            android:textAlignment="center"
+            android:textSize="30sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.739"
+            app:layout_constraintStart_toEndOf="@+id/image_homeWeatherStatus"
+            app:layout_constraintTop_toBottomOf="@+id/text_homeWeatherTempCelsius" />
+
+        <ImageView
+            android:id="@+id/image_homeWeatherStatus"
+            android:layout_width="211dp"
+            android:layout_height="200dp"
+            android:layout_marginStart="16dp"
+            android:background="@color/night_yellow_light"
+            android:contentDescription="@string/text_homeWeatherStatusImage"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/text_homeWeatherBackground"
+            app:layout_constraintTop_toTopOf="@+id/text_homeWeatherBackground"
+            app:layout_constraintVertical_bias="0.0"
+            app:srcCompat="@drawable/ic_thunderstorm_128dp" />
+
+        <TextView
+            android:id="@+id/text_homeWeatherLocation"
+            android:layout_width="95dp"
+            android:layout_height="16dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="40dp"
+            android:text="@string/text_homeWeatherLocation"
+            android:textAlignment="gravity"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/text_homeWeatherTempFahrenheit" />
+
+        <ImageView
+            android:id="@+id/image_homeWeatherLocation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="1dp"
+            android:contentDescription="@string/text_weatherLocation"
+            app:layout_constraintEnd_toStartOf="@+id/text_homeWeatherLocation"
+            app:layout_constraintStart_toEndOf="@+id/image_homeWeatherStatus"
+            app:layout_constraintTop_toBottomOf="@+id/text_homeWeatherTempFahrenheit"
+            app:srcCompat="@drawable/ic_location_on_black_24dp" />
+
+        <ImageView
+            android:id="@+id/image_homeWeatherBackground"
+            android:layout_width="17dp"
+            android:layout_height="17dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="10dp"
+            android:contentDescription="@string/text_weatherBackground"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/text_homeWeatherTempFahrenheit"
+            app:srcCompat="@drawable/ic_expandable_icon_black_dp" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/notificationRecentChatLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:layout_editor_absoluteY="9dp">
+
+            <Button
+                android:id="@+id/action_homeNotificationClearAll"
+                android:layout_width="110dp"
+                android:layout_height="35dp"
+                android:text="Clear All"
+                android:textSize="12sp"
+                app:layout_constraintEnd_toEndOf="@+id/recyclerView_homeNotifications"
+                app:layout_constraintTop_toBottomOf="@+id/recyclerView_homeNotifications" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerView_homeNotifications"
+                android:name="edu.uw.tcss450.team_5_tcss_450.notifications.NotificationListFragment"
+                android:layout_width="370dp"
+                android:layout_height="310dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="264dp"
+                android:layout_marginEnd="16dp"
+                android:orientation="vertical"
+                app:layoutManager="LinearLayoutManager"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.47"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:context="edu.uw.tcss450.team_5_tcss_450.notifications.HomeFragment"
+                tools:listitem="@layout/fragment_notification_card">
+
+            </androidx.recyclerview.widget.RecyclerView>
+
+            <TextView
+                android:id="@+id/text_homeNotifications"
+                android:layout_width="220dp"
+                android:layout_height="wrap_content"
+                android:text="@string/text_homeNoNotifications"
+                android:textAlignment="center"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/recyclerView_homeNotifications"
+                app:layout_constraintEnd_toEndOf="@+id/recyclerView_homeNotifications"
+                app:layout_constraintStart_toStartOf="@+id/recyclerView_homeNotifications"
+                app:layout_constraintTop_toTopOf="@+id/recyclerView_homeNotifications" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

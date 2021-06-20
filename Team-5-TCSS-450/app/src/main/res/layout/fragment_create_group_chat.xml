@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/root_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.chat.CreateGroupChatFragment">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/action_bar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        app:cardBackgroundColor="?attr/colorPrimary"
+        app:cardElevation="4dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageButton
+                android:id="@+id/button_close"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:padding="8dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:src="@drawable/ic_close_dialog_white_24dp"/>
+
+            <Button
+                android:id="@+id/button_create_chat"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="CREATE"
+                android:textColor="@color/white"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+    <EditText
+        android:id="@+id/edit_group_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:ems="10"
+        android:hint="Group name"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/action_bar"
+        app:layout_constraintBottom_toTopOf="@id/search_name"/>
+
+    <SearchView
+        android:id="@+id/search_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/edit_group_name" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_connections"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_margin="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/search_name"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        tools:listitem="@layout/fragment_create_chat_card"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

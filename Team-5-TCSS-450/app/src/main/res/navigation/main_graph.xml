@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_graph"
+    app:startDestination="@id/navigation_home">
+
+    <fragment
+        android:id="@+id/navigation_home"
+        android:name="edu.uw.tcss450.team_5_tcss_450.home.HomeFragment"
+        android:label="@string/title_home"
+        tools:layout="@layout/fragment_home">
+        <action
+            android:id="@+id/action_navigation_home_to_navigation_weather"
+            app:destination="@id/navigation_weather" />
+        <action
+            android:id="@+id/action_navigation_home_to_connectionRequestFragment"
+            app:destination="@id/connectionRequestFragment" />
+        <action
+            android:id="@+id/action_navigation_home_to_navigation_chat"
+            app:destination="@id/navigation_chat" />
+        <action
+            android:id="@+id/action_navigation_home_to_chatRoomFragment"
+            app:destination="@id/chatRoomFragment" />
+        <action
+            android:id="@+id/action_navigation_home_to_navigation_setting"
+            app:destination="@id/navigation_setting" />
+        <action
+            android:id="@+id/action_navigation_home_to_authActivity"
+            app:destination="@id/authActivity" />
+    </fragment>
+    <fragment
+        android:id="@+id/chatRoomFragment"
+        android:name="edu.uw.tcss450.team_5_tcss_450.ui.chat.ChatRoomFragment"
+        android:label="@string/title_chat"
+        tools:layout="@layout/fragment_chat_room">
+        <argument
+            android:name="chatRoom"
+            app:argType="edu.uw.tcss450.team_5_tcss_450.ui.chat.ChatRoomInfo" />
+    </fragment>
+    <fragment
+        android:id="@+id/navigation_chat"
+        android:name="edu.uw.tcss450.team_5_tcss_450.ui.chat.ChatListFragment"
+        android:label="@string/text_homeRecentChatTitle">
+        <action
+            android:id="@+id/action_chatListFragment_to_chatRoomFragment"
+            app:destination="@id/chatRoomFragment" />
+        <action
+            android:id="@+id/action_navigation_chat_to_createGroupChatFragment"
+            app:destination="@id/createGroupChatFragment" />
+        <action
+            android:id="@+id/action_navigation_chat_to_createIndivChatFragment"
+            app:destination="@id/createIndivChatFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/navigation_weather"
+        android:name="edu.uw.tcss450.team_5_tcss_450.weather.fragments.WeatherLocationsFragment"
+        android:label="@string/title_weather"
+        tools:layout="@layout/fragment_weather_locations">
+        <action
+            android:id="@+id/action_weatherLocationsFragment_to_forecastFragment"
+            app:destination="@id/forecastFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/forecastFragment"
+        android:name="edu.uw.tcss450.team_5_tcss_450.weather.fragments.ForecastFragment"
+        android:label="@string/title_forecast"
+        tools:layout="@layout/fragment_forecast">
+        <argument
+            android:name="lat"
+            app:argType="float" />
+        <argument
+            android:name="lon"
+            app:argType="float" />
+    </fragment>
+    <fragment
+        android:id="@+id/navigation_contacts"
+        android:name="edu.uw.tcss450.team_5_tcss_450.ui.connections.ConnectionsFragment"
+        android:label="@string/title_connections"
+        tools:layout="@layout/fragment_connections">
+        <action
+            android:id="@+id/action_navigation_contacts_to_chatRoomFragment"
+            app:destination="@id/chatRoomFragment" />
+        <action
+            android:id="@+id/action_navigation_contacts_to_addConnectionFragment"
+            app:destination="@id/addConnectionFragment" />
+        <action
+            android:id="@+id/action_navigation_contacts_to_connectionRequestFragment"
+            app:destination="@id/connectionRequestFragment" />
+        <action
+            android:id="@+id/action_navigation_contacts_to_createIndivChatFragment"
+            app:destination="@id/createIndivChatFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/addConnectionFragment"
+        android:name="edu.uw.tcss450.team_5_tcss_450.ui.connections.AddConnectionFragment"
+        android:label="@string/title_addConnection"
+        tools:layout="@layout/fragment_add_connection" />
+    <fragment
+        android:id="@+id/connectionRequestFragment"
+        android:name="edu.uw.tcss450.team_5_tcss_450.ui.connections.ConnectionRequestFragment"
+        android:label="@string/title_connectionRequests"
+        tools:layout="@layout/fragment_connection_request" />
+    <fragment
+        android:id="@+id/navigation_setting"
+        android:name="edu.uw.tcss450.team_5_tcss_450.ui.setting.SettingFragment"
+        android:label="@string/text_set"
+        tools:layout="@layout/fragment_setting">
+        <action
+            android:id="@+id/action_navigation_setting_to_passwordChangeFragment"
+            app:destination="@id/passwordChangeFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/passwordChangeFragment"
+        android:name="edu.uw.tcss450.team_5_tcss_450.ui.password.PasswordChangeFragment"
+        android:label="@string/text_change"
+        tools:layout="@layout/fragment_password_change">
+        <action
+            android:id="@+id/action_passwordChangeFragment_to_navigation_setting"
+            app:destination="@id/navigation_setting" />
+    </fragment>
+    <activity
+        android:id="@+id/authActivity"
+        android:name="edu.uw.tcss450.team_5_tcss_450.AuthActivity"
+        android:label="AuthActivity" />
+    <dialog
+        android:id="@+id/createGroupChatFragment"
+        android:name="edu.uw.tcss450.team_5_tcss_450.ui.chat.CreateGroupChatFragment"
+        android:label="fragment_create_group_chat"
+        tools:layout="@layout/fragment_create_group_chat" >
+        <action
+            android:id="@+id/action_createGroupChatFragment_to_chatRoomFragment"
+            app:destination="@id/chatRoomFragment" />
+    </dialog>
+    <dialog
+        android:id="@+id/createIndivChatFragment"
+        android:name="edu.uw.tcss450.team_5_tcss_450.ui.chat.CreateIndivChatFragment"
+        android:label="fragment_create_indiv_chat"
+        tools:layout="@layout/fragment_create_indiv_chat" >
+        <action
+            android:id="@+id/action_createIndivChatFragment_to_chatRoomFragment"
+            app:destination="@id/chatRoomFragment" />
+    </dialog>
+</navigation>

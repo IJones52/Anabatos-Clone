@@ -1,0 +1,178 @@
+<resources>
+    <string name="app_name">Anabatos</string>
+
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="text_nick">Nick Name</string>
+    <string name="text_first">First Name</string>
+    <string name="text_last">Last Name</string>
+    <string name="text_email">Email</string>
+    <string name="text_password">Password</string>
+    <string name="text_retype_password">Retype Password</string>
+
+    <string name="button_Login">LOG IN</string>
+    <string name="button_Register">REGISTER</string>
+    <string name="button_forgot">Forgot Password?</string>
+    <string name="button_back">BACK</string>
+    <string name="button_verification">VERIFY</string>
+
+    <string name="text_verification">Verify the information by
+                           clicking the VERIFICATION button</string>
+
+    <string name="text_recovery">Recover Password</string>
+    <string name="text_password_recovery">Enter the registered email
+        associated with your account and we will send a link.</string>
+
+    <string name="text_change">Change password</string>
+    <string name="text_password_change">Password must be different
+        from the previous passwords.</string>
+
+    <string name="text_type_email">Type Your Email</string>
+    <string name="text_old_password">Old Password</string>
+    <string name="text_new_password">New Password</string>
+    <string name="text_confirm_password">Confirm Password</string>
+
+    <string name="button_send">SEND</string>
+    <string name="button_cancel">CANCEL</string>
+    <string name="button_change">Change</string>
+
+    <string name="text_set">SETTINGS</string>
+    <string name="text_logout">LOGOUT</string>
+    <string name="text_mode">Dark Mode</string>
+
+    <string name="switch_log_in">Stay Log in</string>
+    <string name="keys_shared_prefs">My Auth App Shared Prefs</string>
+    <string name="keys_prefs_email">Sharded Prefs email</string>
+    <string name="keys_prefs_jwt">Sharded Prefs JWT</string>
+    <string name="keys_prefs_nick">Sharded Prefs nick</string>
+    <string name="keys_prefs_user">Sharded Prefs user</string>
+    <string name="keys_prefs_id">Sharded Prefs id</string>
+    <string name="action_log_out">Log Out</string>
+
+    <string name="text_nameLabel">Name</string>
+    <string name="action_chat">CHAT</string>
+    <string name="action_delete">Delete</string>
+    <string name="action_request">Request</string>
+    <string name="text_requestLabel">Search by name or nickname, or enter the email of the user to send a request</string>
+    <string name="text_emailLabel">Email/Search</string>
+    <string name="action_requests">My Requests</string>
+    <string name="action_accept">ACCEPT</string>
+    <string name="action_decline">DECLINE</string>
+    <string name="action_remove">REMOVE</string>
+    <string name="action_yes">Yes</string>
+    <string name="action_no">No</string>
+    <string name="action_confrimation">Are you sure?</string>
+    <string name="label_sentRequests">Pending Requests</string>
+    <string name="action_cancel">CANCEL</string>
+    <string name="title_connections">Connections</string>
+    <string name="title_connectionRequests">Connection Requests</string>
+    <string name="title_addConnection">Add Connections</string>
+    <string name="keys_json_blogs_response">rows</string>
+    <string name="keys_json_blogs_data">data</string>
+    <string name="keys_json_connections_fname">firstname</string>
+    <string name="keys_json_connections_lname">lastname</string>
+    <string name="keys_json_connections_email">email</string>
+    <string name="keys_json_connections_id">memberid</string>
+    <string name="label_emptyConnections">You have no connections at this time. Press the search icon to get started.</string>
+    <string name="label_emptyRequestsOut">You have no outgoing requests at this time.</string>
+    <string name="label_emptyRequestsIn">You have no incoming requests at this time.</string>
+
+
+    <string name="edit_typeMessage">Message</string>
+    <string name="title_chat">Chat</string>
+    <string name="title_chat_requests">Chat Requests</string>
+    <string name="button_accept">Accept</string>
+    <string name="button_decline">Decline</string>
+
+
+    <string name="title_home">Home</string>
+    <string name="title_weather">Weather</string>
+
+    <string name="title_contacts">Contacts</string>
+    <string name="text_weatherTitle">Weather</string>
+    <string name="action_navToWeather">weather</string>
+    <string name="text_weatherBackground">weatherBackground</string>
+    <string name="text_weatherToday">Today\'s Forecast</string>
+    <string name="text_homeWeatherDate">Wed, April 28 7:25 AM</string>
+    <string name="text_weatherLocation">weatherLocation</string>
+    <string name="text_homeWeatherLocation">Seattle, WA</string>
+    <string name="text_homeWeatherTempCelsius">0/0 C</string>
+    <string name="text_homeWeatherTempFahrenheit">0/0 F</string>
+    <string name="text_homeWelcomeMessage">Good Morning User</string>
+    <string name="text_welcomeMessageImage">welcomeMessageImage</string>
+    <string name="text_homeRecentChatTitle">Recent Chats</string>
+    <string name="text_homeNotificationTitle">Notifications</string>
+    <string name="text_homeNoNotifications">No new notifications</string>
+    <string name="text_cardNotficationType">New Message from Team 5</string>
+    <string name="text_cardNotficationMessage">Message: Hello client. It\'ll be nice working together on this application!</string>
+    <string name="text_cardNotificationImage">imageType</string>
+    <string name="text_cardNotificationDate">Jan 1, 1970 12:00</string>
+    <string name="action_navToRecentChat">navToRecentChat</string>
+
+
+    <string name="text_weather_monday">Mon</string>
+    <string name="text_weather_tuesday">Tue</string>
+    <string name="text_weather_wednesday">Wed</string>
+    <string name="text_weather_thursday">Thu</string>
+    <string name="text_weather_friday">Fri</string>
+    <string name="text_weather_saturday">Sat</string>
+    <string name="text_weather_sunday">Sun</string>
+    <string name="text_weather_noZipCode">We can\'t find that zip code</string>
+    <string name="text_weather_badZipCode">There was an error trying to add this zip code</string>
+    <string name="text_weather_invalidZipCode">Invalid zip code</string>
+
+    <string name="text_weather_addLocation">Add Location</string>
+    <string name="text_weather_zipcode">Zip Code</string>
+
+    <string name="text_weather_latitudeShort">Lat</string>
+    <string name="text_weather_longitudeShort">Lon</string>
+
+    <string name="keys_json_weather_dailyWeather">daily</string>
+    <string name="keys_json_weather_hourlyWeather">hourly</string>
+    <string name="keys_json_weather_highTemperature">max</string>
+    <string name="keys_json_weather_lowTemperature">min</string>
+    <string name="keys_json_weather_currentWeather">current</string>
+    <string name="keys_json_weather_temperature">temp</string>
+    <string name="keys_json_weather_icon">icon</string>
+    <string name="keys_json_weather_deltaTime">dt</string>
+    <string name="keys_json_weather_errorCode">dt</string>
+
+    <string name="keys_json_weather">weather</string>
+
+    <string name="label">Label</string>
+    <string name="Register_NickName">Nick Name</string>
+    <string name="Register_FirstName">First Name</string>
+    <string name="Register_LastName">Last Name</string>
+    <string name="Register_Email">Email</string>
+    <string name="Register_Password">Password</string>
+    <string name="Register_RetypePassword">Retype Password</string>
+    <string name="button_Register_REGISTER">REGISTER</string>
+
+    <string name="button_VERIFICATION">VERIFICATION</string>
+    <string name="text_VERIFICATION">Verify the information by
+                           clicking the VERIFICATION button</string>
+    <string name="title_forecast">Forecast</string>
+    <string name="title_register">Register</string>
+    <string name="title_verification">Verification</string>
+    <string name="title_recover">Recover Password</string>
+    <string name="text_homeWeatherStatus">Cloudy</string>
+
+    <string name="text_homeWeatherStatusImage">Weather status image</string>
+    <string name="text_notificationCardNavigateImage">Navigates</string>
+    <string name="text_emailVerificationInfo">Upon submitting, an email will be sent to you in order to confirm your email address. If you cannot find it try checking your spam folder</string>
+
+    <string name="base_url">https://team-5-tcss-450.herokuapp.com/</string>
+    <string name="text_good_morning">"Good Morning "</string>
+    <string name="text_good_afternoon">"Good Afternoon "</string>
+    <string name="text_good_evening">"Good Evening "</string>
+    <string name="text_good_night">"Good Night "</string>
+    <string name="text_clear_sky">Clear\nSky</string>
+    <string name="text_few_clouds">Few\nClouds</string>
+    <string name="text_scattered_clouds">Scattered\nClouds</string>
+    <string name="text_broken_clouds">Broken\nClouds</string>
+    <string name="text_shower_rain">Shower\nRain</string>
+    <string name="text_rain">Rain</string>
+    <string name="text_thunderstorm">Thunderstorm</string>
+    <string name="text_snow">Snow</string>
+    <string name="text_mist">Mist</string>
+</resources>

@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/frameLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginBottom="64dp"
+    tools:context=".weather.fragments.WeatherLocationsFragment">
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/nestedScrollView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <edu.uw.tcss450.team_5_tcss_450.weather.views.WeatherView
+                android:id="@+id/weather_current"
+                android:layout_width="match_parent"
+                android:layout_height="512dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="16dp"
+                app:layout_constrainedHeight="false" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/locations"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                tools:listitem="@layout/weather_location_row_view">
+
+            </androidx.recyclerview.widget.RecyclerView>
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+        android:id="@+id/button_add_weather_location"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:backgroundTint="@color/primaryColor"
+        android:clickable="true"
+        android:textColor="@color/primaryTextColor"
+        app:icon="@drawable/ic_create_new_chat_24dp"
+        app:layout_constraintBottom_toBottomOf="@+id/nestedScrollView"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+        android:id="@+id/button_add_zip_location"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:backgroundTint="@color/primaryColor"
+        android:clickable="true"
+        app:icon="@drawable/ic_baseline_add_location_24dp"
+        android:textColor="@color/primaryTextColor"
+        android:visibility="gone"
+        android:text="Zip Code"
+        app:layout_constraintBottom_toTopOf="@+id/button_add_weather_location"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!--<com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+        android:id="@+id/button_add_map_location"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:backgroundTint="@color/primaryColor"
+        android:clickable="true"
+        app:icon="@drawable/ic_baseline_add_location_24dp"
+        android:textColor="@color/primaryTextColor"
+        android:visibility="gone"
+        android:text="Map"
+        app:layout_constraintBottom_toTopOf="@+id/button_add_zip_location"
+        app:layout_constraintEnd_toEndOf="parent" />-->
+
+</androidx.constraintlayout.widget.ConstraintLayout>

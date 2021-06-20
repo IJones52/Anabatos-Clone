@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/frameLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.connections.AddConnectionFragment">
+
+    <Button
+        android:id="@+id/button_request"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/action_request"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.93"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editText_request" />
+
+    <AutoCompleteTextView
+        android:id="@+id/editText_request"
+        android:layout_width="366dp"
+        android:layout_height="46dp"
+        android:layout_marginTop="16dp"
+        android:dropDownAnchor="@+id/editText_request"
+
+        android:ems="10"
+        android:hint="@string/text_emailLabel"
+        android:inputType="textPersonName"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.644"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="360dp"
+        android:layout_height="49dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/text_requestLabel"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView_sentRequests"
+        android:layout_width="390dp"
+        android:layout_height="443dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/text_sentRequests"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="16dp"
+        android:text="@string/label_sentRequests"
+        app:layout_constraintBottom_toTopOf="@+id/recyclerView_sentRequests"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layout_empty"
+        android:layout_width="391dp"
+        android:layout_height="445dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/recyclerView_sentRequests"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/label_emptyRequestsOut"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
